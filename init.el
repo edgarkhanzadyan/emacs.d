@@ -16,9 +16,46 @@
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
 
+;; change command key to super
+;;(setq mac-right-command-modifier 'super) ;; make cmd key do Meta
+;; change gn key to hyper
+;;(setq ns-function-modifier 'hyper)  ;; make Fn key do Hyper
 ;;enable auto-complete
 (ac-config-default)
 (setq merlin-ac-setup t) ;; adds merlin source to auto-complete default sources
+;;make apropos sort by relevancy
+(setq apropos-sort-by-scores t)
+;; use undo-tree, more intuitive implementation of undo
+;;(require 'undo-tree)
+;;turn on everywhere
+;;(global-undo-tree-mode)
+;; make ctrl-z undo
+;;(global-set-key (kbd "s-z") 'undo)
+;; make ctrl-Z redo
+;;(defalias 'redo 'undo-tree-redo)
+;;(global-set-key (kbd "s-S-z") 'redo)
+
+;;use winner-mode permanently, mode which remembers chain of windows
+;;C-c <left> ; C-c <right>
+(winner-mode 1)
+
+;;rebind changing window from C-x o to M-o
+(global-set-key (kbd "M-o") 'other-window)
+
+;;using cardinal directions instead of cycling through all windows
+;; S-<left>, S-<right>, S-<up>, S-<dowm>
+(windmove-default-keybindings)
+
+;; minor mode what treats CamlCase as distinct words
+(global-subword-mode)
+
+;; minor mode that treats snake_case as one word
+;;(global-superword-mode)
+
+;; visually (it does not alter your buffer text) separates
+;;CamelCase words into Camel_Case.
+;;(glasses-mode)
+
 ;;after this is going a code that i haven't touched, made by custom
 
 
@@ -69,7 +106,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (auto-complete dracula-theme solarized-theme minimap json-mode js2-mode)))
+    (undo-tree auto-complete dracula-theme solarized-theme minimap json-mode js2-mode)))
  '(pos-tip-background-color "#eee8d5")
  '(pos-tip-foreground-color "#586e75")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))
@@ -114,3 +151,15 @@
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
 (require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
 ;; ## end of OPAM user-setup addition for emacs / base ## keep this line
+
+
+;; after this there is my code
+
+;;(let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
+;; (when (and opam-share (file-directory-p opam-share))
+;;  (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))
+;;  (autoload 'merlin-mode "merlin" nil t nil)
+;;  (add-hook 'tuareg-mode-hook 'merlin-mode t)
+;;  (add-hook 'caml-mode-hook 'merlin-mode t)))
+
+(put 'scroll-left 'disabled nil)
