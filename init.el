@@ -5,7 +5,7 @@
 ;; packages that i'm using:
 ;; paradox
 ;; magit
-;; js2-mode
+;; rjsx-mode
 ;; dimmer
 ;; multiple-cursors
 ;; company-tern
@@ -91,10 +91,10 @@
 (setq multi-term-program "/bin/zsh")
 
 ;; use js2-jsx-mode as a major mode
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
-(add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode))
+(add-to-list 'interpreter-mode-alist '("node" . rjsx-mode))
 
 ;; add company and company-tern for autocompletion in js
 (require 'company)
@@ -207,7 +207,7 @@
 		("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
 	 (quote
-		(magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
+		(rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
  '(paradox-automatically-star nil)
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
