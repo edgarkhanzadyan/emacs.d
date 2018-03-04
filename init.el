@@ -33,6 +33,7 @@
 (global-set-key (kbd "M-h") 'backward-kill-word)
 (global-set-key (kbd "M-[") 'backward-paragraph)
 (global-set-key (kbd "M-]") 'forward-paragraph)
+
 ;; no ring bell (ANNOYING)
 (setq ring-bell-function 'ignore)
 
@@ -75,6 +76,19 @@
 (require 'paradox)
 (paradox-enable)
 
+;; configure keys for dired-subtree
+(require 'dired-subtree)
+(define-key dired-mode-map (kbd "C-i") 'dired-subtree-insert)
+(define-key dired-mode-map (kbd "C-k") 'dired-subtree-remove)
+(define-key dired-mode-map (kbd "C-/") 'dired-subtree-apply-filter)
+(define-key dired-mode-map (kbd "C-n") 'dired-subtree-next-sibling)
+(define-key dired-mode-map (kbd "C-p") 'dired-subtree-previous-sibling)
+(define-key dired-mode-map (kbd "C-u") 'dired-subtree-up)
+(define-key dired-mode-map (kbd "C-d") 'dired-subtree-down)
+(define-key dired-mode-map (kbd "C-a") 'dired-subtree-beginning)
+(define-key dired-mode-map (kbd "C-e") 'dired-subtree-end)
+
+;; configure magit
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
@@ -207,7 +221,7 @@
 		("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
 	 (quote
-		(rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
+		(dired-subtree rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
  '(paradox-automatically-star nil)
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
