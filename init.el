@@ -25,6 +25,10 @@
 ;;
 ;;
 
+;; use M-n and M-p for moving by paragraphs
+(global-set-key (kbd "M-n") 'forward-paragraph)
+(global-set-key (kbd "M-p") 'backward-paragraph)
+
 ;; rebind changing window key from C-x o to M-o
 (global-set-key (kbd "M-o") 'other-window)
 
