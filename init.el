@@ -72,6 +72,13 @@
 ;;
 ;;
 
+;; add diff-hl to magit
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+(add-hook 'find-file-hook 'diff-hl-mode)
+(add-hook 'find-file-hook 'diff-hl-margin-mode)
+(add-hook 'find-file-hook 'diff-hl-flydiff-mode)
+(add-hook 'dired-mode-hook 'diff-hl-dired-mode-unless-remote)
+
 ;; setup gnu and melpa package-archives
 (setq package-archives
 			'(("gnu" . "http://elpa.gnu.org/packages/")
@@ -228,7 +235,7 @@
 		("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
 	 (quote
-		(dired-subtree rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
+		(diff-hl dired-subtree rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
  '(paradox-automatically-star nil)
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
