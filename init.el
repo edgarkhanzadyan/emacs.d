@@ -25,6 +25,9 @@
 ;;
 ;;
 
+;; kill a buffer without asking me for the confirmation
+(global-set-key [(control x) (k)] 'kill-this-buffer)
+
 ;; use M-n and M-p for moving by paragraphs
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "M-p") 'backward-paragraph)
