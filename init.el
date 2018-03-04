@@ -264,3 +264,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;
+;;
+;; LOAD AFTER THEMES (otherwise emacs first openes stupid white page: ANNOYING )
+;;
+;;
+
+
+;; Emacs gurus don't need stinking scroll bars & widgets
+(scroll-bar-mode -1)
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(tooltip-mode -1)
