@@ -44,6 +44,9 @@
 ;; no ring bell (ANNOYING)
 (setq ring-bell-function 'ignore)
 
+;; no more tabs please
+(setq-default indent-tabs-mode nil)
+
 ;; set default tab char's display width to 4 spaces
 (setq-default tab-width 2)
 
