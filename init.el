@@ -93,6 +93,8 @@
 (require 'paradox)
 (paradox-enable)
 
+;; rainbow-mode
+(add-hook 'scss-mode-hook 'rainbow-mode)
 ;; configure keys for dired-subtree
 (require 'dired-subtree)
 (define-key dired-mode-map (kbd "C-i") 'dired-subtree-insert)
@@ -238,7 +240,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (diff-hl async dired-subtree rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
+    (rainbow-mode diff-hl async dired-subtree rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
  '(paradox-automatically-star nil)
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
