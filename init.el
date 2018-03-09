@@ -1,4 +1,3 @@
-
 ;; hints:
 ;; to view pdf files run "M-x pdf-tools-install"
 
@@ -24,6 +23,8 @@
 ;; NO-PACKAGE SETUP
 ;;
 ;;
+
+
 
 ;; kill a buffer without asking me for the confirmation
 (global-set-key [(control x) (k)] 'kill-this-buffer)
@@ -65,8 +66,8 @@
   "Toggle full screen"
   (interactive)
   (set-frame-parameter
-	 nil 'fullscreen
-	 (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+   nil 'fullscreen
+   (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
 (global-set-key (kbd "M-RET") 'toggle-fullscreen)
 
 ;;
@@ -84,9 +85,9 @@
 
 ;; setup gnu and melpa package-archives
 (setq package-archives
-			'(("gnu" . "http://elpa.gnu.org/packages/")
-				;;   ("marmalade" . "http://marmalade-repo.org/packages/")
-				("melpa" . "http://melpa.milkbox.net/packages/")))
+      '(("gnu" . "http://elpa.gnu.org/packages/")
+        ;;   ("marmalade" . "http://marmalade-repo.org/packages/")
+        ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; initialize packages
 (package-initialize)
@@ -118,7 +119,7 @@
 (add-hook 'find-file-hook 'smartparens-mode)
 
 ;; use dimmer which indicates which buffer is currently
-;; active by dimming the faces in the other buffers. 
+;; active by dimming the faces in the other buffers.
 (require 'dimmer)
 (dimmer-mode)
 
@@ -136,8 +137,8 @@
 (require 'company-tern)
 (add-to-list 'company-backends 'company-tern)
 (add-hook 'js2-jsx-mode-hook (lambda ()
-															 (tern-mode)
-															 (company-mode)))
+                               (tern-mode)
+                               (company-mode)))
 ;; turn off company-tern circle marker
 (setq company-tern-property-marker nil)
 
