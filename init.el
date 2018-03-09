@@ -107,6 +107,8 @@
 (define-key dired-mode-map (kbd "C-a") 'dired-subtree-beginning)
 (define-key dired-mode-map (kbd "C-e") 'dired-subtree-end)
 
+(add-hook 'before-save-hook 'whitespace-cleanup)
+
 ;; configure magit
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -211,6 +213,7 @@
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "c620ce43a0b430dcc1b06850e0a84df4ae5141d698d71e17de85e7494377fd81" "e4859645a914c748b966a1fe53244ff9e043e00f21c5989c4a664d649838f6a3" "7527f3308a83721f9b6d50a36698baaedc79ded9f6d5bd4e9a28a22ab13b3cb1" "4486ade2acbf630e78658cd6235a5c6801090c2694469a2a2b4b0e12227a64b9" default)))
  '(dimmer-fraction 0.2)
  '(fci-rule-color "#3E4451")
+ '(global-whitespace-mode t)
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
    (--map
@@ -273,6 +276,9 @@
  '(weechat-color-list
    (quote
     (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))
+ '(whitespace-style
+   (quote
+    (face trailing tabs spaces lines lines-tail newline empty big-indent space-after-tab space-before-tab space-mark tab-mark)))
  '(xterm-color-names
    ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#eee8d5"])
  '(xterm-color-names-bright
