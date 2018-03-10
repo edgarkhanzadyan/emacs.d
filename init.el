@@ -24,8 +24,6 @@
 ;;
 ;;
 
-
-
 ;; kill a buffer without asking me for the confirmation
 (global-set-key [(control x) (k)] 'kill-this-buffer)
 
@@ -96,6 +94,7 @@
 
 ;; rainbow-mode
 (add-hook 'scss-mode-hook 'rainbow-mode)
+
 ;; configure keys for dired-subtree
 (require 'dired-subtree)
 (define-key dired-mode-map (kbd "C-i") 'dired-subtree-insert)
@@ -296,7 +295,6 @@
 ;; LOAD AFTER THEMES (otherwise emacs first openes stupid white page: ANNOYING )
 ;;
 ;;
-
 
 ;; Emacs gurus don't need stinking scroll bars & widgets
 (scroll-bar-mode -1)
