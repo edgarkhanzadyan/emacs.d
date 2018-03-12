@@ -95,6 +95,18 @@
 (require 'paradox)
 (paradox-enable)
 
+;; ;; Install the packages automatically
+;; (defvar package-list)
+;; (setq package-list '(async ;; list other packages to autoinstall those
+;;                      ))
+;; ;; fetch the list of packages available
+;; (unless package-archive-contents
+;;   (package-refresh-contents))
+;; ;; install the missing packages
+;; (dolist (package package-list)
+;;   (unless (package-installed-p package)
+;;     (package-install package)))
+
 ;; rainbow-mode
 (add-hook 'scss-mode-hook 'rainbow-mode)
 
