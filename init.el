@@ -178,6 +178,9 @@
 (global-set-key (kbd "C-c C-.") 'mc/mark-all-like-this)
 ;; try this one day mc-hide-unmatched-lines-mode
 
+(require 'editorconfig)
+(editorconfig-mode 1)
+
 ;;
 ;;
 ;; THEME & FONT SETUP
@@ -272,7 +275,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (rainbow-mode diff-hl async dired-subtree rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
+    (editorconfig rainbow-mode diff-hl async dired-subtree rjsx-mode magit solarized-theme dimmer smartparens markdown-mode company-tern pdf-tools paradox try multi-term json-mode auto-complete xref-js2 js2-refactor js2-mode atom-one-dark-theme nord-theme oceanic-theme peacock-theme)))
  '(paradox-automatically-star nil)
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
