@@ -40,6 +40,11 @@
 ;; rebind changing window key from C-x o to M-o
 (global-set-key (kbd "M-o") 'other-window)
 
+;; bind help functions to C-?
+;; mark paragraph to M-?
+(global-set-key (kbd "C-?") 'help-command)
+(global-set-key (kbd "M-?") 'mark-paragraph)
+
 ;; set C-h and M-h to backward deletes
 (global-set-key (kbd "C-h") 'backward-delete-char)
 (global-set-key (kbd "M-h") 'backward-kill-word)
