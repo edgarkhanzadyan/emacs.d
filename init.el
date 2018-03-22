@@ -24,6 +24,9 @@
 ;;
 ;;
 
+;; don't use backup files
+(setq make-backup-files nil)
+
 ;; We don't want to type yes and no all the time so, do y and n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
