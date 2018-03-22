@@ -74,6 +74,9 @@
    (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
 (global-set-key (kbd "M-RET") 'toggle-fullscreen)
 
+;; set show-paren-mode by default
+(show-paren-mode 1)
+
 ;;
 ;;
 ;; PROGRAMMING PACKAGE SETUP
