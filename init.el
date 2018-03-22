@@ -330,3 +330,4 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
+(put 'narrow-to-region 'disabled nil)
